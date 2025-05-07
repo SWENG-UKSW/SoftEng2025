@@ -1,3 +1,0 @@
-class Quick
-!!!136322.cpp!!!	sort(inout data : SortData<T>) : SortError
-return SE_SUCCESS;
