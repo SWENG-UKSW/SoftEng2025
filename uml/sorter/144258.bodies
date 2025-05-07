@@ -1,3 +1,0 @@
-class Select
-!!!149762.cpp!!!	sort(inout data : SortData<T>) : SortError
-return SE_SUCCESS;
