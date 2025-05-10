@@ -8,7 +8,7 @@
 template<class T, template<typename...> class Container>
 class Merge : public SortTech<T, Container> {
   public:
-    inline SortError sort(SortData<T> & data) override;
+    inline SortError sort(SortData<T, Container> & data) override;
 
     void mergeSort(SortSeparateData<T>& data, size_t left, size_t right) {
       if (left < right) {
@@ -45,7 +45,8 @@ class Merge : public SortTech<T, Container> {
     }
 };
 template<class T, template<typename...> class Container>
-inline SortError Merge<T, Container>::sort(SortData<T> & data) {
+
+inline SortError Merge<T, Container>::sort(SortData<T, Container> & data) {
 
   SortData<T>* pdata = &data;
 
@@ -59,7 +60,6 @@ inline SortError Merge<T, Container>::sort(SortData<T> & data) {
 
     mergeSort(sep_data, 0, data.size() - 1);
   }
-
 
   return SE_SUCCESS;
 }
