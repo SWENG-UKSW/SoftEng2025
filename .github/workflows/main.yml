@@ -63,8 +63,8 @@ jobs:
       run: cmake --build build
 
 
-  # - name: Run tests
-  #   run: ctest --test-dir build
+    - name: Run tests
+      run: ctest --test-dir build
 
   formatcheck:
     name: Check code format
@@ -79,3 +79,5 @@ jobs:
         run: chmod +x ./clang_format.sh
       - name: Check code format
         run: ./clang_format.sh      
+# Minor trigger fix to force CI re-run
+
